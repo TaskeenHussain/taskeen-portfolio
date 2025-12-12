@@ -52,14 +52,14 @@ nav .links a {
 }
 header {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
     animation: fadeIn 1.2s ease-in-out;
 }
 header h1 { font-size: 42px; margin-bottom: 10px; }
 header p { font-size: 18px; opacity: .9; }
-header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid white; }
+header img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid white; }
 .section {
     margin: 40px auto;
     width: 90%;
@@ -81,11 +81,10 @@ header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover;
 .skill-name { font-weight: 600; }
 .bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; transition: transform .3s, box-shadow .3s; text-align: center; }
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 25px; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
 body.dark .project-card { background: rgba(30,40,60,0.6); }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
-.project-card img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
 .button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
 .button:hover { background: var(--secondary); }
 .timeline { position: relative; margin: 20px 0; padding-left: 40px; }
@@ -135,8 +134,9 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
 <div id="about" class="section">
     <h2>About Me</h2>
     <p>
-        I am a data analyst skilled in Python, EDA, Pandas, visualization, and machine learning.
-        I enjoy converting raw data into meaningful insights and interactive dashboards.
+        I am a data analyst passionate about transforming raw data into actionable insights.
+        I combine Python, machine learning, and visualization to tell meaningful stories with data.
+        My approach emphasizes <strong>storytelling and project depth</strong>, creating impactful results.
     </p>
 </div>
 
@@ -145,7 +145,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <h2>Skills</h2>
     <div class="skill"><div class="skill-name">Python</div><div class="bar"><div class="bar-fill"></div></div></div>
     <div class="skill"><div class="skill-name">Pandas / NumPy</div><div class="bar"><div class="bar-fill"></div></div></div>
-    <div class="skill"><div class="skill-name">Visualization</div><div class="bar"><div class="bar-fill"></div></div></div>
+    <div class="skill"><div class="skill-name">Data Visualization</div><div class="bar"><div class="bar-fill"></div></div></div>
     <div class="skill"><div class="skill-name">Machine Learning</div><div class="bar"><div class="bar-fill"></div></div></div>
 </div>
 
@@ -153,25 +153,28 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
 <div id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
-        <!-- Project 1 -->
         <div class="project-card">
-            <img src="apple_playstore.png" alt="Apple Play Store Dataset">
             <h3>📌 Apple Play Store Dataset</h3>
-            <p>Analysis and insights from Apple Play Store data.</p>
+            <p>
+                Conducted in-depth analysis of Apple Play Store apps. Explored patterns, trends, and app ratings to derive actionable business insights.
+                Focused on <strong>storytelling and project depth</strong> to explain findings effectively.
+            </p>
             <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
-        <!-- Project 2 -->
         <div class="project-card">
-            <img src="seaborn_plots.png" alt="Seaborn Plots">
-            <h3>📌 Seaborn Plots</h3>
-            <p>Various data visualization plots using Seaborn library.</p>
+            <h3>📌 Penguin_Dataset</h3>
+            <p>
+                Created comprehensive visualizations using Seaborn to highlight patterns in datasets.
+                Emphasized <strong>storytelling and clarity</strong> in data visualization.
+            </p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
-        <!-- Project 3 -->
         <div class="project-card">
-            <img src="plot_varieties.png" alt="Plot Varieties">
-            <h3>📌 Plot Varieties</h3>
-            <p>Different types of plots demonstrated using Seaborn and Matplotlib.</p>
+            <h3>📌 Data_visualization</h3>
+            <p>
+                Demonstrated a variety of plotting techniques with Matplotlib and Seaborn.
+                Projects designed to highlight <strong>depth, clarity, and storytelling</strong> in data analysis.
+            </p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
     </div>
@@ -183,7 +186,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <div class="timeline">
         <div class="timeline-item">
             <h3>Data Science Intern – Kangroo Ventures (June 2025)</h3>
-            <p>Conducted EDA, cleaned data, built dashboards and reports.</p>
+            <p>Conducted EDA, cleaned data, built dashboards and reports emphasizing project depth.</p>
         </div>
         <div class="timeline-item">
             <h3>M.Com Marketing – University of Agriculture, Faisalabad (2016)</h3>
@@ -202,7 +205,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
 
 <!-- BACK TO TOP -->
 <div class="back-to-top" id="backTop">↑</div>
-<footer>© 2025 Taskeen Hussain — All Rights Reserved</footer>
+<footer>© 2025 Taskeen Hussain — Top Tier Portfolio</footer>
 
 <script>
 // Dark Mode Toggle
