@@ -52,13 +52,14 @@ nav .links a {
 }
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
     animation: fadeIn 1.2s ease-in-out;
 }
 header h1 { font-size: 42px; margin-bottom: 10px; }
 header p { font-size: 18px; opacity: .9; }
+header img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 15px; border: 4px solid white; }
 .section {
     margin: 40px auto;
     width: 90%;
@@ -121,12 +122,15 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     </div>
     <button id="darkToggle">🌙 Dark Mode</button>
 </nav>
+
 <!-- HERO -->
 <header>
+    <img src="tsk123.png" alt="Taskeen Hussain Profile Image">
     <h1>Taskeen Hussain</h1>
     <p id="typing"></p>
     <a href="Taskeen_Hussain_Modern_CV.pdf" class="button" target="_blank">Download CV</a>
 </header>
+
 <!-- ABOUT -->
 <div id="about" class="section">
     <h2>About Me</h2>
@@ -135,6 +139,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
         I enjoy converting raw data into meaningful insights and interactive dashboards.
     </p>
 </div>
+
 <!-- SKILLS -->
 <div id="skills" class="section">
     <h2>Skills</h2>
@@ -143,33 +148,35 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <div class="skill"><div class="skill-name">Visualization</div><div class="bar"><div class="bar-fill"></div></div></div>
     <div class="skill"><div class="skill-name">Machine Learning</div><div class="bar"><div class="bar-fill"></div></div></div>
 </div>
+
 <!-- PROJECTS -->
 <div id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-            <img src="taskeen-portfolio/apple_playstore.png" alt="Apple Play Store Dataset">
+            <img src="apple_playstore.png" alt="Apple Play Store Dataset">
             <h3>📌 Apple Play Store Dataset</h3>
             <p>Analysis and insights from Apple Play Store data.</p>
             <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
         <!-- Project 2 -->
         <div class="project-card">
-            <img src="taskeen-portfolio/seaborn_plots.png" alt="Seaborn Plots">
+            <img src="seaborn_plots.png" alt="Seaborn Plots">
             <h3>📌 Seaborn Plots</h3>
             <p>Various data visualization plots using Seaborn library.</p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
         <!-- Project 3 -->
         <div class="project-card">
-            <img src="taskeen-portfolio/plot_varieties.png" alt="Plot Varieties">
+            <img src="plot_varieties.png" alt="Plot Varieties">
             <h3>📌 Plot Varieties</h3>
             <p>Different types of plots demonstrated using Seaborn and Matplotlib.</p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
     </div>
 </div>
+
 <!-- EXPERIENCE / EDUCATION TIMELINE -->
 <div id="experience" class="section">
     <h2>Experience & Education</h2>
@@ -183,6 +190,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
         </div>
     </div>
 </div>
+
 <!-- CONTACT -->
 <div id="contact" class="section">
     <h2>Contact</h2>
@@ -191,9 +199,11 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <p>Kaggle: <a href="https://www.kaggle.com/taskeenhkbbeechtree">kaggle.com/taskeenhkbbeechtree</a></p>
     <a href="mailto:taskeenuaf@gmail.com" class="button">Email Me</a>
 </div>
+
 <!-- BACK TO TOP -->
 <div class="back-to-top" id="backTop">↑</div>
 <footer>© 2025 Taskeen Hussain — All Rights Reserved</footer>
+
 <script>
 // Dark Mode Toggle
 document.getElementById("darkToggle").onclick = function () {
