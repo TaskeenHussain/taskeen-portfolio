@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taskeen Hussain | Data Analyst Portfolio</title>
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -41,7 +40,9 @@ nav .links a {
     color: white;
     margin: 0 15px;
     font-weight: 600;
+    transition: 0.3s;
 }
+nav .links a:hover { color: #ffeb3b; }
 #darkToggle {
     background: white;
     border: none;
@@ -81,28 +82,19 @@ header img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
 .skill-name { font-weight: 600; }
 .bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
-.projects-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
-.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 25px; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
+.projects-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
+.project-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 25px; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
 body.dark .project-card { background: rgba(30,40,60,0.6); }
-.project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+.project-card h3 { margin-top: 0; color: var(--primary); }
+.project-card p { margin: 10px 0; line-height: 1.5; }
 .button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
 .button:hover { background: var(--secondary); }
 .timeline { position: relative; margin: 20px 0; padding-left: 40px; }
 .timeline::before { content: ''; position: absolute; left: 20px; top: 0; width: 4px; height: 100%; background: var(--primary); }
 .timeline-item { margin-bottom: 20px; position: relative; }
 .timeline-item::before { content: ''; position: absolute; left: -12px; top: 5px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--primary);
-    color: white;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    display: none;
-}
+.back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--primary); color: white; padding: 10px 15px; border-radius: 50%; font-size: 18px; cursor: pointer; display: none; }
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 @keyframes slideUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
 @keyframes grow { from {width:0;} to {width:100%;} }
@@ -136,7 +128,7 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <p>
         I am a data analyst passionate about transforming raw data into actionable insights.
         I combine Python, machine learning, and visualization to tell meaningful stories with data.
-        My approach emphasizes <strong>storytelling and project depth</strong>, creating impactful results.
+        My projects emphasize <strong>storytelling and depth</strong> to create real impact.
     </p>
 </div>
 
@@ -153,29 +145,45 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
 <div id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
+        <!-- Project 1 -->
         <div class="project-card">
-            <h3>📌 Apple Play Store Dataset</h3>
+            <h3>📌 Artificial-Intelligence_Data-Science</h3>
             <p>
-                Conducted in-depth analysis of Apple Play Store apps. Explored patterns, trends, and app ratings to derive actionable business insights.
-                Focused on <strong>storytelling and project depth</strong> to explain findings effectively.
+                Performed exploratory data analysis, visualizations, and applied machine learning techniques.
+                Focused on <strong>storytelling and depth</strong> to communicate insights effectively.
             </p>
             <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
+        <!-- Project 2 -->
         <div class="project-card">
             <h3>📌 Penguin_Dataset</h3>
             <p>
-                Created comprehensive visualizations using Seaborn to highlight patterns in datasets.
-                Emphasized <strong>storytelling and clarity</strong> in data visualization.
+                Analyzed the Penguin Dataset using Seaborn to create insightful visualizations and patterns.
+                Emphasized <strong>storytelling & project depth</strong> for better data interpretation.
             </p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
+        <!-- Project 3 -->
         <div class="project-card">
-            <h3>📌 Data_visualization</h3>
+            <h3>📌 Apple_Play_Store_Data</h3>
             <p>
-                Demonstrated a variety of plotting techniques with Matplotlib and Seaborn.
-                Projects designed to highlight <strong>depth, clarity, and storytelling</strong> in data analysis.
+                Analyzed Apple Play Store apps to uncover trends, ratings patterns, and business insights.
+                Included detailed <strong>storytelling and project depth</strong> to explain findings.
             </p>
             <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" class="button" target="_blank">View Notebook</a>
+        </div>
+        <!-- Retail Sales Insights Dashboard -->
+        <div class="project-card">
+            <h3>📌 Retail Sales Insights Dashboard</h3>
+            <p>
+                Tools: Python, Pandas, NumPy, Matplotlib/Seaborn, Jupyter Notebook<br>
+                Skills: Data Cleaning, Trend Analysis, Customer Segmentation, Data Visualization
+            </p>
+            <p><strong>Problem:</strong> The company struggled with seasonal patterns, low-performing categories, and customer behavior.</p>
+            <p><strong>Solution:</strong> Cleaned data, engineered features, visualized trends, segmented customers, and derived actionable insights.</p>
+            <p><strong>Key Insights:</strong> Seasonal peaks, product performance, top customer segments, geographic variations.</p>
+            <p><strong>Impact:</strong> Improved stocking decisions, forecasting accuracy, and identification of high-value customers.</p>
+            <a href="#" class="button" target="_blank">View Notebook</a>
         </div>
     </div>
 </div>
@@ -215,26 +223,17 @@ document.getElementById("darkToggle").onclick = function () {
 };
 // Back to Top Button
 const backTop = document.getElementById("backTop");
-window.onscroll = () => {
-    backTop.style.display = window.scrollY > 200 ? "block" : "none";
-};
+window.onscroll = () => { backTop.style.display = window.scrollY > 200 ? "block" : "none"; };
 backTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
 // Typing Animation
 const text = ["Data Analyst", "Python Developer", "Machine Learning Enthusiast"];
-let i = 0, j = 0, currentText = "", isDeleting = false;
-const typingElement = document.getElementById("typing");
-function type() {
-    if(i >= text.length) i=0;
-    currentText = text[i];
-    if(!isDeleting) {
-        typingElement.textContent = currentText.substring(0, j+1);
-        j++;
-        if(j === currentText.length) { isDeleting = true; setTimeout(type,1000); return; }
-    } else {
-        typingElement.textContent = currentText.substring(0, j-1);
-        j--;
-        if(j===0){ isDeleting=false; i++; }
-    }
+let i=0,j=0,currentText="",isDeleting=false;
+const typingElement=document.getElementById("typing");
+function type(){
+    if(i>=text.length)i=0;
+    currentText=text[i];
+    if(!isDeleting){typingElement.textContent=currentText.substring(0,j+1);j++;if(j===currentText.length){isDeleting=true;setTimeout(type,1000);return;}}
+    else{typingElement.textContent=currentText.substring(0,j-1);j--;if(j===0){isDeleting=false;i++;}}
     setTimeout(type,100);
 }
 type();
