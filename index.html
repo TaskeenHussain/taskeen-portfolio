@@ -88,10 +88,27 @@ header p { font-size: 18px; opacity: .9; }
 .bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
 
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; transition: transform .3s, box-shadow .3s; }
-body.dark .project-card { background: rgba(30,40,60,0.6); }
-.project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <h3>📌 Kaggle Capstone – AI Agent Analysis</h3>
+            <p>EDA + insights from AI agent behavior benchmarking.</p>
+            <a href="https://www.kaggle.com/taskeenhkbbeechtree" target="_blank" class="button">View Notebook</a>
+        </div>
+        <div class="project-card">
+            <h3>📌 Online Sales Dashboard</h3>
+            <p>Sales trends, category performance, and forecast visualizations.</p>
+            <a href="https://github.com/TaskeenHussain/online-sales-dashboard" target="_blank" class="button">View Repository</a>
+        </div>
+        <div class="project-card">
+            <h3>📌 Customer Churn Prediction</h3>
+            <p>ML model predicting churn using RandomForest & Logistic Regression.</p>
+            <a href="https://github.com/TaskeenHussain/customer-churn-prediction" target="_blank" class="button">View Repository</a>
+        </div>
+    </div>
+</div>
 
 .button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
 .button:hover { background: var(--secondary); }
