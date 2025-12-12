@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taskeen Hussain | Data Analyst Portfolio</title>
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 <style>
 :root {
     --bg: #f4f7fb;
@@ -21,7 +19,6 @@ body.dark {
     --text: #e2e8f0;
     --card-bg: rgba(30,40,60,0.6);
 }
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -30,7 +27,6 @@ body {
     transition: background .3s, color .3s;
 }
 a { text-decoration: none; color: var(--primary); }
-
 nav {
     position: sticky;
     top: 0;
@@ -54,7 +50,6 @@ nav .links a {
     cursor: pointer;
     font-weight: bold;
 }
-
 header {
     text-align: center;
     padding: 80px 20px;
@@ -64,7 +59,6 @@ header {
 }
 header h1 { font-size: 42px; margin-bottom: 10px; }
 header p { font-size: 18px; opacity: .9; }
-
 .section {
     margin: 40px auto;
     width: 90%;
@@ -82,42 +76,20 @@ header p { font-size: 18px; opacity: .9; }
     padding-left: 10px;
     margin-bottom: 20px;
 }
-
 .skill { margin: 12px 0; }
 .skill-name { font-weight: 600; }
 .bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
-
-<!-- PROJECTS -->
-<div id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <h3>📌 Kaggle Capstone – AI Agent Analysis</h3>
-            <p>EDA + insights from AI agent behavior benchmarking.</p>
-            <a href="https://www.kaggle.com/taskeenhkbbeechtree" target="_blank" class="button">View Notebook</a>
-        </div>
-        <div class="project-card">
-            <h3>📌 Online Sales Dashboard</h3>
-            <p>Sales trends, category performance, and forecast visualizations.</p>
-            <a href="https://github.com/TaskeenHussain/online-sales-dashboard" target="_blank" class="button">View Repository</a>
-        </div>
-        <div class="project-card">
-            <h3>📌 Customer Churn Prediction</h3>
-            <p>ML model predicting churn using RandomForest & Logistic Regression.</p>
-            <a href="https://github.com/TaskeenHussain/customer-churn-prediction" target="_blank" class="button">View Repository</a>
-        </div>
-    </div>
-</div>
-
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; transition: transform .3s, box-shadow .3s; }
+body.dark .project-card { background: rgba(30,40,60,0.6); }
+.project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
 .button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
 .button:hover { background: var(--secondary); }
-
 .timeline { position: relative; margin: 20px 0; padding-left: 40px; }
 .timeline::before { content: ''; position: absolute; left: 20px; top: 0; width: 4px; height: 100%; background: var(--primary); }
 .timeline-item { margin-bottom: 20px; position: relative; }
 .timeline-item::before { content: ''; position: absolute; left: -12px; top: 5px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
-
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -130,18 +102,13 @@ header p { font-size: 18px; opacity: .9; }
     cursor: pointer;
     display: none;
 }
-
 @keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
 @keyframes slideUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
 @keyframes grow { from {width:0;} to {width:100%;} }
-
 footer { text-align: center; padding: 20px; background: var(--primary); color: white; margin-top: 40px; }
-
 </style>
 </head>
-
 <body>
-
 <!-- NAV -->
 <nav>
     <div class="links">
@@ -153,14 +120,12 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     </div>
     <button id="darkToggle">🌙 Dark Mode</button>
 </nav>
-
 <!-- HERO -->
 <header>
     <h1>Taskeen Hussain</h1>
     <p id="typing"></p>
     <a href="Taskeen_Hussain_Modern_CV.pdf" class="button" target="_blank">Download CV</a>
 </header>
-
 <!-- ABOUT -->
 <div id="about" class="section">
     <h2>About Me</h2>
@@ -169,7 +134,6 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
         I enjoy converting raw data into meaningful insights and interactive dashboards.
     </p>
 </div>
-
 <!-- SKILLS -->
 <div id="skills" class="section">
     <h2>Skills</h2>
@@ -178,29 +142,27 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <div class="skill"><div class="skill-name">Visualization</div><div class="bar"><div class="bar-fill"></div></div></div>
     <div class="skill"><div class="skill-name">Machine Learning</div><div class="bar"><div class="bar-fill"></div></div></div>
 </div>
-
 <!-- PROJECTS -->
 <div id="projects" class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
         <div class="project-card">
-            <h3>📌 Kaggle Capstone – AI Agent Analysis</h3>
-            <p>EDA + insights from AI agent behavior benchmarking.</p>
-            <a href="#" class="button">View Notebook</a>
+            <h3>📌 Data Visualization – AI Data Science</h3>
+            <p>Exploratory Data Analysis and visualizations using Python libraries.</p>
+            <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" target="_blank" class="button">View Notebook</a>
         </div>
         <div class="project-card">
-            <h3>📌 Online Sales Dashboard</h3>
-            <p>Sales trends, category performance, and forecast visualizations.</p>
-            <a href="#" class="button">View Notebook</a>
+            <h3>📌 Seaborn Plots – Use of Seaborn</h3>
+            <p>Various types of plots using Seaborn library in Python.</p>
+            <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" target="_blank" class="button">View Notebook</a>
         </div>
         <div class="project-card">
-            <h3>📌 Customer Churn Prediction</h3>
-            <p>ML model predicting churn using RandomForest & Logistic Regression.</p>
-            <a href="#" class="button">View Notebook</a>
+            <h3>📌 Plot Varieties – Use of Seaborn</h3>
+            <p>Examples of different plot varieties using Seaborn library.</p>
+            <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" target="_blank" class="button">View Notebook</a>
         </div>
     </div>
 </div>
-
 <!-- EXPERIENCE / EDUCATION TIMELINE -->
 <div id="experience" class="section">
     <h2>Experience & Education</h2>
@@ -214,7 +176,6 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
         </div>
     </div>
 </div>
-
 <!-- CONTACT -->
 <div id="contact" class="section">
     <h2>Contact</h2>
@@ -223,31 +184,25 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <p>Kaggle: <a href="https://www.kaggle.com/taskeenhkbbeechtree">kaggle.com/taskeenhkbbeechtree</a></p>
     <a href="mailto:taskeenuaf@gmail.com" class="button">Email Me</a>
 </div>
-
 <!-- BACK TO TOP -->
 <div class="back-to-top" id="backTop">↑</div>
-
 <footer>© 2025 Taskeen Hussain — All Rights Reserved</footer>
-
 <script>
 // Dark Mode Toggle
 document.getElementById("darkToggle").onclick = function () {
     document.body.classList.toggle("dark");
     this.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
 };
-
 // Back to Top Button
 const backTop = document.getElementById("backTop");
 window.onscroll = () => {
     backTop.style.display = window.scrollY > 200 ? "block" : "none";
 };
 backTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
-
 // Typing Animation
 const text = ["Data Analyst", "Python Developer", "Machine Learning Enthusiast"];
 let i = 0, j = 0, currentText = "", isDeleting = false;
 const typingElement = document.getElementById("typing");
-
 function type() {
     if(i >= text.length) i=0;
     currentText = text[i];
@@ -264,6 +219,5 @@ function type() {
 }
 type();
 </script>
-
 </body>
 </html>
