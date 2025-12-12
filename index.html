@@ -81,9 +81,10 @@ header p { font-size: 18px; opacity: .9; }
 .bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; transition: transform .3s, box-shadow .3s; }
+.project-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); padding: 20px; border-radius: 10px; transition: transform .3s, box-shadow .3s; text-align: center; }
 body.dark .project-card { background: rgba(30,40,60,0.6); }
 .project-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+.project-card img { max-width: 100%; border-radius: 8px; margin-bottom: 10px; }
 .button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
 .button:hover { background: var(--secondary); }
 .timeline { position: relative; margin: 20px 0; padding-left: 40px; }
@@ -148,23 +149,24 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-            <h3>📌 Data Visualization – AI Data Science</h3>
-            <p>Exploratory Data Analysis and visualizations using Python libraries.</p>
-            <iframe src="https://nbviewer.org/github/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" width="100%" height="400" frameborder="0"></iframe>
+            <img src="taskeen-portfolio/apple_playstore.png" alt="Apple Play Store Dataset">
+            <h3>📌 Apple Play Store Dataset</h3>
+            <p>Analysis and insights from Apple Play Store data.</p>
+            <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
-
         <!-- Project 2 -->
         <div class="project-card">
-            <h3>📌 Peguin Dataset</h3>
-            <p>Various types of plots using Seaborn library in Python.</p>
-            <iframe src="https://nbviewer.org/github/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" width="100%" height="400" frameborder="0"></iframe>
+            <img src="taskeen-portfolio/seaborn_plots.png" alt="Seaborn Plots">
+            <h3>📌 Seaborn Plots</h3>
+            <p>Various data visualization plots using Seaborn library.</p>
+            <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/03_seaborn_plots.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
-
         <!-- Project 3 -->
         <div class="project-card">
-            <h3>📌 Apple Play Store Data</h3>
-            <p>different plot using Seaborn library.</p>
-            <iframe src="https://nbviewer.org/github/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" width="100%" height="400" frameborder="0"></iframe>
+            <img src="taskeen-portfolio/plot_varieties.png" alt="Plot Varieties">
+            <h3>📌 Plot Varieties</h3>
+            <p>Different types of plots demonstrated using Seaborn and Matplotlib.</p>
+            <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" class="button" target="_blank">View Notebook</a>
         </div>
     </div>
 </div>
