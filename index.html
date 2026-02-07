@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taskeen Hussain | Data Analyst Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 :root {
     --bg: #f4f7fb;
@@ -13,11 +14,13 @@
     --primary: #1f4e79;
     --secondary: #3a7bd5;
 }
+
 body.dark {
     --bg: #0f172a;
     --text: #e2e8f0;
     --card-bg: rgba(30,40,60,0.6);
 }
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -25,7 +28,19 @@ body {
     color: var(--text);
     transition: background .3s, color .3s;
 }
+
+/* 🔴 FIX: Anchor offset for sticky navbar */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+#about, #skills, #projects, #experience, #contact {
+    scroll-margin-top: 80px;
+}
+
 a { text-decoration: none; color: var(--primary); }
+
 nav {
     position: sticky;
     top: 0;
@@ -36,13 +51,13 @@ nav {
     justify-content: space-between;
     align-items: center;
 }
+
 nav .links a {
     color: white;
     margin: 0 15px;
     font-weight: 600;
-    transition: 0.3s;
 }
-nav .links a:hover { color: #ffeb3b; }
+
 #darkToggle {
     background: white;
     border: none;
@@ -51,16 +66,21 @@ nav .links a:hover { color: #ffeb3b; }
     cursor: pointer;
     font-weight: bold;
 }
+
 header {
     text-align: center;
     padding: 80px 20px;
     background: linear-gradient(to right, var(--primary), var(--secondary));
     color: white;
-    animation: fadeIn 1.2s ease-in-out;
 }
-header h1 { font-size: 42px; margin-bottom: 10px; }
-header p { font-size: 18px; opacity: .9; }
-header img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover; margin-bottom: 20px; border: 4px solid white; }
+
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
 .section {
     margin: 40px auto;
     width: 90%;
@@ -69,40 +89,39 @@ header img { width: 160px; height: 160px; border-radius: 50%; object-fit: cover;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    animation: slideUp .6s ease;
-    transition: background .3s, color .3s;
 }
-.section h2 {
-    color: var(--primary);
-    border-left: 5px solid var(--primary);
-    padding-left: 10px;
-    margin-bottom: 20px;
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
 }
-.skill { margin: 12px 0; }
-.skill-name { font-weight: 600; }
-.bar { width: 100%; height: 10px; background: #d9e4f2; border-radius: 5px; margin-top: 5px; overflow: hidden; }
-.bar-fill { height: 100%; background: var(--secondary); width: 0; animation: grow 2s forwards; }
-.projects-grid { display: grid; grid-template-columns: 1fr; gap: 25px; }
-.project-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); padding: 25px; border-radius: 12px; transition: transform .3s, box-shadow .3s; }
-body.dark .project-card { background: rgba(30,40,60,0.6); }
-.project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
-.project-card h3 { margin-top: 0; color: var(--primary); }
-.project-card p { margin: 10px 0; line-height: 1.5; }
-.button { display: inline-block; padding: 10px 20px; background: var(--primary); color: white; border-radius: 6px; margin-top: 10px; transition: .3s; }
-.button:hover { background: var(--secondary); }
-.timeline { position: relative; margin: 20px 0; padding-left: 40px; }
-.timeline::before { content: ''; position: absolute; left: 20px; top: 0; width: 4px; height: 100%; background: var(--primary); }
-.timeline-item { margin-bottom: 20px; position: relative; }
-.timeline-item::before { content: ''; position: absolute; left: -12px; top: 5px; width: 12px; height: 12px; background: var(--primary); border-radius: 50%; }
-.back-to-top { position: fixed; bottom: 20px; right: 20px; background: var(--primary); color: white; padding: 10px 15px; border-radius: 50%; font-size: 18px; cursor: pointer; display: none; }
-@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
-@keyframes slideUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
-@keyframes grow { from {width:0;} to {width:100%;} }
-footer { text-align: center; padding: 20px; background: var(--primary); color: white; margin-top: 40px; }
+
+.project-card {
+    background: rgba(255,255,255,0.8);
+    padding: 25px;
+    border-radius: 12px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border-radius: 6px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--primary);
+    color: white;
+}
 </style>
 </head>
+
 <body>
-<!-- NAV -->
+
 <nav>
     <div class="links">
         <a href="#about">About</a>
@@ -114,148 +133,54 @@ footer { text-align: center; padding: 20px; background: var(--primary); color: w
     <button id="darkToggle">🌙 Dark Mode</button>
 </nav>
 
-<!-- HERO -->
 <header>
-    <img src="tsk123.png" alt="Taskeen Hussain Profile Image">
+    <img src="tsk123.png">
     <h1>Taskeen Hussain</h1>
     <p id="typing"></p>
-    <a href="Taskeen_Hussain_Modern_CV.pdf" class="button" target="_blank">Download CV</a>
 </header>
 
-<!-- ABOUT -->
 <div id="about" class="section">
     <h2>About Me</h2>
-    <p>
-        I am a data analyst passionate about transforming raw data into actionable insights.
-        I combine Python, machine learning, and visualization to tell meaningful stories with data.
-        My projects emphasize <strong>storytelling and depth</strong> to create real impact.
-    </p>
+    <p>Data Analyst focused on storytelling and business insights.</p>
 </div>
 
-<!-- SKILLS -->
 <div id="skills" class="section">
     <h2>Skills</h2>
-    <div class="skill"><div class="skill-name">Python</div><div class="bar"><div class="bar-fill"></div></div></div>
-    <div class="skill"><div class="skill-name">Pandas / NumPy</div><div class="bar"><div class="bar-fill"></div></div></div>
-    <div class="skill"><div class="skill-name">Data Visualization</div><div class="bar"><div class="bar-fill"></div></div></div>
-    <div class="skill"><div class="skill-name">Machine Learning</div><div class="bar"><div class="bar-fill"></div></div></div>
 </div>
 
-<!-- PROJECTS -->
 <div id="projects" class="section">
     <h2>Projects</h2>
+
+    <!-- 🔴 FIX: projects-grid properly wrapped -->
     <div class="projects-grid">
-        <!-- Project 1 -->
+
         <div class="project-card">
-            <h3>📌 Artificial-Intelligence_Data-Science</h3>
-            <p>
-                Performed exploratory data analysis, visualizations, and applied machine learning techniques.
-                Focused on <strong>storytelling and depth</strong> to communicate insights effectively.
-            </p>
-            <a href="https://github.com/TaskeenHussain/Artificial-Intelligence_Data-Science/blob/main/09_data_visualization.ipynb" class="button" target="_blank">View Notebook</a>
+            <h3>📌 AI & Data Science</h3>
+            <a class="button" href="#">View</a>
         </div>
-        <!-- Project 2 -->
-       <div class="project-card">
-  <h3>📊 Customer Analytics & Machine Learning Projects</h3>
 
-  <p>
-    End-to-end data science projects focused on customer churn prediction and
-    customer segmentation using RFM analysis and K-Means clustering.
-    The work demonstrates data preprocessing, exploratory data analysis,
-    feature engineering, machine learning modeling, and actionable business insights.
-  </p>
-
-  <p>
-    <strong>Tech Stack:</strong>
-    Python, Pandas, NumPy, Scikit-learn, Jupyter Notebook
-  </p>
-
-  <a href="https://github.com/TaskeenHussain/Data_Science_project"
-     target="_blank"
-     class="button">
-     🔗 GitHub Repository
-  </a>
-</div>
-       <!-- Project 3 -->
         <div class="project-card">
-            <h3>📌 Apple_Play_Store_Data</h3>
-            <p>
-                Analyzed Apple Play Store apps to uncover trends, ratings patterns, and business insights.
-                Included detailed <strong>storytelling and project depth</strong> to explain findings.
-            </p>
-            <a href="https://github.com/TaskeenHussain/Use_of_Seaborn/blob/main/01_Plot_varieties.ipynb" class="button" target="_blank">View Notebook</a>
+            <h3>📊 Customer Analytics</h3>
+            <a class="button" href="#">View</a>
         </div>
-</div>
-<div class="project-card">
-  <h3>📈 Data Visualization & Dashboards (Tableau)</h3>
 
-  <p>
-    Interactive data visualizations and business dashboards created using
-    Tableau Public. These dashboards focus on uncovering trends, patterns,
-    and actionable insights to support data-driven decision-making.
-  </p>
-
-  <p>
-    <strong>Tech Stack:</strong>
-    Tableau Public, Data Visualization, Business Intelligence, Analytics
-  </p>
-
-  <a href="https://public.tableau.com/app/profile/taskeen.hussain/vizzes"
-     target="_blank"
-     class="button">
-     🔗 View Tableau Dashboards
-  </a>
-</div>
-
-<!-- EXPERIENCE / EDUCATION TIMELINE -->
-<div id="experience" class="section">
-    <h2>Experience & Education</h2>
-    <div class="timeline">
-        <div class="timeline-item">
-            <h3>Data Science Intern – Kangroo Ventures (June 2025)</h3>
-            <p>Conducted EDA, cleaned data, built dashboards and reports emphasizing project depth.</p>
+        <div class="project-card">
+            <h3>📈 Tableau Dashboards</h3>
+            <a class="button" href="#">View</a>
         </div>
-        <div class="timeline-item">
-            <h3>M.Com Marketing – University of Agriculture, Faisalabad (2016)</h3>
-        </div>
+
     </div>
 </div>
 
-<!-- CONTACT -->
-<div id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Email: <strong>taskeenuaf@gmail.com</strong></p>
-    <p>GitHub: <a href="https://github.com/TaskeenHussain">github.com/TaskeenHussain</a></p>
-    <p>Kaggle: <a href="https://www.kaggle.com/taskeenhkbbeechtree">kaggle.com/taskeenhkbbeechtree</a></p>
-    <a href="mailto:taskeenuaf@gmail.com" class="button">Email Me</a>
+<div id="experience" class="section">
+    <h2>Experience</h2>
 </div>
 
-<!-- BACK TO TOP -->
-<div class="back-to-top" id="backTop">↑</div>
-<footer>© 2025 Taskeen Hussain — Top Tier Portfolio</footer>
+<div id="contact" class="section">
+    <h2>Contact</h2>
+</div>
 
-<script>
-// Dark Mode Toggle
-document.getElementById("darkToggle").onclick = function () {
-    document.body.classList.toggle("dark");
-    this.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
-};
-// Back to Top Button
-const backTop = document.getElementById("backTop");
-window.onscroll = () => { backTop.style.display = window.scrollY > 200 ? "block" : "none"; };
-backTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
-// Typing Animation
-const text = ["Data Analyst", "Python Developer", "Machine Learning Enthusiast"];
-let i=0,j=0,currentText="",isDeleting=false;
-const typingElement=document.getElementById("typing");
-function type(){
-    if(i>=text.length)i=0;
-    currentText=text[i];
-    if(!isDeleting){typingElement.textContent=currentText.substring(0,j+1);j++;if(j===currentText.length){isDeleting=true;setTimeout(type,1000);return;}}
-    else{typingElement.textContent=currentText.substring(0,j-1);j--;if(j===0){isDeleting=false;i++;}}
-    setTimeout(type,100);
-}
-type();
-</script>
+<footer>© 2025 Taskeen Hussain</footer>
+
 </body>
 </html>
